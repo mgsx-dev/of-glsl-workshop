@@ -1,0 +1,25 @@
+#version 120
+
+uniform float time;
+uniform vec2 size;
+uniform vec2 mouse;
+
+void main()
+{
+	vec2 pos = vec2(gl_FragCoord.x / size.x, gl_FragCoord.y / size.y); 
+	vec2 cur = vec2(mouse.x / size.x, mouse.y / size.y); 
+	
+	float sin1 = (sin(pos.x * 3.1415 * 2.0 * 30.0 * cur.x + time * 3.0) * cur.y) * 0.5;
+	float sin2 = (sin(pos.x * 3.1415 * 2.0 * 30.7 + time * 7.0) * cur.y) * 0.2;
+	
+	float value = sin1 * sin2 + 0.5;
+	
+	float lum = smoothstep(0, 0.01, abs(value - pos.y));
+	
+	vec3 colorA = vec3(0.0, 5.0, 1.0);
+	vec3 colorB = vec3(0.0, 0.0, 0.0);
+	
+	vec3 color = mix(colorA, colorB, lum);
+	
+	gl_FragColor = vec4(color, 1.0);
+}

@@ -1,0 +1,8 @@
+# Ignore binaries but not bin/data
+/bin/*
+!/bin/data
+/obj
+/Debug/
+
+# Ignore Eclipse settings
+/.settings
