@@ -1,5 +1,5 @@
 
-This project is a code base for a workshop around OpenFrameworks and GLSL.
+This project is a code base for a workshop around OpenFrameworks and GLSL. Preview available here : http://www.mgsx.net/of-glsl-workshop/
 
 Setup instructions are based on Ubuntu 14.04 and Eclipse Mars but may be adapted for other OS and IDE.
 
