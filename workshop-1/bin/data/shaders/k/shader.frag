@@ -11,6 +11,8 @@ void main()
     
 	float v = 1.0 - length(pos - vec2(0.5, 0.5)) * 2.0;
 	
+	v = sin(v * 3.0 * cur.x);
+
 	vec3 color = vec3(v,v,v);
 	
 	gl_FragColor = vec4(color, 1.0);

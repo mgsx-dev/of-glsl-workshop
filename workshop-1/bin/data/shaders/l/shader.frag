@@ -15,7 +15,7 @@ void main()
 	vec2 pol = vec2(atan(pos.y, pos.x) / 3.1415, v);
 	
 	
-	float circle = pol.x * 0.5 + 0.5; // smoothstep(0.5, 0.52, v);
+	float circle = sin(pol.x * 30000.0 * cur.x) * 0.5 + 0.5; // smoothstep(0.5, 0.52, v);
 	
 	vec3 color = vec3(circle, circle, circle);
 	
